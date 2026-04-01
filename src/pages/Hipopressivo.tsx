@@ -266,7 +266,7 @@ const Hipopressivo = () => {
 
           <ScrollReveal delay={0.3}>
             <p className="font-body text-muted-foreground text-center max-w-2xl mx-auto mt-10 text-base italic">
-              E tudo isso sem seguir dieta restritiva, sem cortar carboidrato, sem abrir mão da cervejinha ou do vinho do fim de semana. Sem fazer um único abdominal tradicional.
+              E tudo isso sem seguir dieta restritiva, e sem precisar fazer um único abdominal tradicional.
             </p>
           </ScrollReveal>
         </div>
