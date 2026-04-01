@@ -1,4 +1,4 @@
-@import url('https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600&family=Oswald:wght@500;600;700&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Bebas+Neue&family=Poppins:ital,wght@0,300;0,400;0,500;0,600;0,700;1,400;1,600&display=swap');
 
 @tailwind base;
 @tailwind components;
@@ -6,101 +6,99 @@
 
 @layer base {
   :root {
-    --background: 0 0% 7%;
-    --foreground: 0 0% 95%;
+    --background: 0 0% 5.1%;
+    --foreground: 0 0% 100%;
 
-    --card: 0 0% 10%;
-    --card-foreground: 0 0% 95%;
+    --card: 0 0% 7.8%;
+    --card-foreground: 0 0% 100%;
 
-    --popover: 0 0% 10%;
-    --popover-foreground: 0 0% 95%;
+    --popover: 0 0% 7.8%;
+    --popover-foreground: 0 0% 100%;
 
-    --primary: 322 80% 55%;
+    --primary: 347 78% 55%;
     --primary-foreground: 0 0% 100%;
 
-    --secondary: 0 0% 13%;
-    --secondary-foreground: 0 0% 95%;
+    --secondary: 0 0% 10.2%;
+    --secondary-foreground: 0 0% 100%;
 
-    --muted: 0 0% 15%;
-    --muted-foreground: 0 0% 60%;
+    --muted: 0 0% 10.2%;
+    --muted-foreground: 0 0% 62.7%;
 
-    --accent: 322 80% 55%;
+    --accent: 347 78% 55%;
     --accent-foreground: 0 0% 100%;
 
     --destructive: 0 84.2% 60.2%;
     --destructive-foreground: 0 0% 100%;
 
-    --border: 0 0% 18%;
-    --input: 0 0% 18%;
-    --ring: 322 80% 55%;
+    --border: 347 78% 55% / 0.2;
+    --input: 0 0% 15%;
+    --ring: 347 78% 55%;
 
     --radius: 0.75rem;
 
-    --glow-primary: 0 0 30px hsl(322 80% 55% / 0.4);
-    --glow-primary-strong: 0 0 60px hsl(322 80% 55% / 0.6);
+    --primary-light: 350 100% 70%;
+    --surface-dark: 0 0% 3.1%;
 
-    --sidebar-background: 0 0% 8%;
-    --sidebar-foreground: 0 0% 95%;
-    --sidebar-primary: 322 80% 55%;
+    --sidebar-background: 0 0% 5.1%;
+    --sidebar-foreground: 0 0% 100%;
+    --sidebar-primary: 347 78% 55%;
     --sidebar-primary-foreground: 0 0% 100%;
-    --sidebar-accent: 0 0% 13%;
-    --sidebar-accent-foreground: 0 0% 95%;
-    --sidebar-border: 0 0% 18%;
-    --sidebar-ring: 322 80% 55%;
-  }
-}
-
-@layer base {
-  * {
-    @apply border-border;
+    --sidebar-accent: 0 0% 10.2%;
+    --sidebar-accent-foreground: 0 0% 100%;
+    --sidebar-border: 347 78% 55% / 0.2;
+    --sidebar-ring: 347 78% 55%;
   }
 
   body {
-    @apply bg-background text-foreground font-body antialiased;
+    font-family: 'Poppins', sans-serif;
+    @apply bg-background text-foreground;
   }
 
   h1, h2, h3, h4, h5, h6 {
-    @apply font-heading;
+    font-family: 'Bebas Neue', sans-serif;
+  }
+
+  * {
+    @apply border-border;
   }
 }
 
 @layer components {
-  .glow-card {
-    @apply relative bg-card border border-border rounded-2xl overflow-hidden transition-all duration-300;
-    &:hover {
-      border-color: hsl(var(--primary) / 0.5);
-      box-shadow: var(--glow-primary);
+  .cta-pulse {
+    animation: cta-pulse 2s cubic-bezier(0.4, 0, 0.6, 1) infinite;
+  }
+
+  @keyframes cta-pulse {
+    0%, 100% {
+      box-shadow: 0 0 15px hsl(347 78% 55% / 0.4), 0 0 30px hsl(347 78% 55% / 0.2);
+    }
+    50% {
+      box-shadow: 0 0 25px hsl(347 78% 55% / 0.7), 0 0 50px hsl(347 78% 55% / 0.3);
     }
   }
 
-  .glow-image {
-    box-shadow: var(--glow-primary-strong);
-    @apply rounded-2xl;
+  .glow-line {
+    animation: draw-line 1.5s ease-out forwards;
+  }
+
+  @keyframes draw-line {
+    from { width: 0%; }
+    to { width: 100%; }
+  }
+
+  @keyframes marquee {
+    0% { transform: translateX(0); }
+    100% { transform: translateX(-50%); }
+  }
+
+  .marquee-track {
+    animation: marquee 30s linear infinite;
   }
 
   .label-tag {
-    @apply inline-block px-4 py-1.5 text-xs font-semibold tracking-[0.2em] uppercase rounded-full bg-primary/15 text-primary border border-primary/30;
-  }
-
-  .cta-pulse {
-    animation: cta-pulse-anim 2s cubic-bezier(0.4, 0, 0.6, 1) infinite;
-  }
-
-  @keyframes cta-pulse-anim {
-    0%, 100% {
-      box-shadow: 0 0 0 0 hsl(322 80% 55% / 0.5);
-    }
-    50% {
-      box-shadow: 0 0 0 12px hsl(322 80% 55% / 0);
-    }
-  }
-
-  .ticker-scroll {
-    animation: ticker-scroll 30s linear infinite;
-  }
-
-  @keyframes ticker-scroll {
-    0% { transform: translateX(0); }
-    100% { transform: translateX(-50%); }
+    @apply inline-block px-4 py-1.5 text-xs font-semibold tracking-[0.2em] uppercase rounded-full;
+    background: hsl(347 78% 55% / 0.1);
+    color: hsl(var(--primary));
+    border: 1px solid hsl(347 78% 55% / 0.3);
   }
 }
