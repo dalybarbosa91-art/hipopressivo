@@ -131,8 +131,8 @@ const Hipopressivo = () => {
       {/* HEADER */}
       <header className="fixed top-0 left-0 right-0 z-50 bg-background/80 backdrop-blur-md border-b border-border">
         <div className="container mx-auto px-4 flex items-center justify-between h-16">
-          <a href="#" className="font-heading text-xl text-primary tracking-wide">
-            Protocolo Hipopressivo Team Daly
+          <a href="#">
+            <img src={logoImg} alt="Daly Barbosa - Treinamento Feminino" className="h-10" />
           </a>
 
           <nav className="hidden md:flex items-center gap-8">
