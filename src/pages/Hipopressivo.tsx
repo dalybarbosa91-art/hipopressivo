@@ -183,7 +183,7 @@ const Hipopressivo = () => {
                 <h1 className="font-heading text-5xl md:text-7xl leading-tight text-foreground mb-6">
                   <TypewriterText
                     text="Reduza até 12cm de cintura, trate a diástase e acabe com os escapes de urina em 12 semanas de treinos curtos em casa"
-                    className="text-5xl"
+                    className="text-6xl"
                     speed={25}
                     delay={300}
                   />
