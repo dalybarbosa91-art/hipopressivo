@@ -181,7 +181,8 @@ const Hipopressivo = () => {
                 </span>
                 <h1 className="font-heading text-5xl md:text-7xl leading-tight text-foreground mb-6">
                   <TypewriterText
-                    text="O método definitivo para qualquer mulher reduzir até 12cm de cintura, tratar a diástase e acabar com os escapes de urina em 12 semanas de treinos curtos em casa"
+                    text="Reduza até 12cm de cintura, trate a diástase e acabe com os escapes de urina em 12 semanas de treinos curtos em casa"
+                    className="text-5xl"
                     speed={25}
                     delay={300}
                   />
