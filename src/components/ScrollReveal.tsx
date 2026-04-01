@@ -1,13 +1,15 @@
 import { motion } from "framer-motion";
-import { ReactNode } from "react";
+import type { ReactNode } from "react";
 
-interface ScrollRevealProps {
+const ScrollReveal = ({
+  children,
+  className = "",
+  delay = 0,
+}: {
   children: ReactNode;
-  delay?: number;
   className?: string;
-}
-
-const ScrollReveal = ({ children, delay = 0, className = "" }: ScrollRevealProps) => (
+  delay?: number;
+}) => (
   <motion.div
     initial={{ opacity: 0, y: 30 }}
     whileInView={{ opacity: 1, y: 0 }}
