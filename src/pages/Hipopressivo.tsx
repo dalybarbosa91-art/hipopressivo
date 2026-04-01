@@ -1,4 +1,5 @@
 import { useState } from "react";
+import logoImg from "@/assets/logo-daly.jpg";
 import { Menu, X, Check, AlertTriangle, Calendar, CheckSquare, BarChart2 } from "lucide-react";
 import ScrollReveal from "@/components/ScrollReveal";
 import GlowCard from "@/components/GlowCard";
