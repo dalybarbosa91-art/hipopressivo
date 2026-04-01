@@ -35,7 +35,7 @@ const PAIN_ITEMS = [
   "Vestir as roupas que você parou de usar porque a barriga aparecia",
   "Tirar fotos nas férias sem se preocupar com o ângulo",
   "Se sentir mais segura, confiante e bonita e isso vai refletir em tudo ao seu redor",
-  "Descobrir que barriga bonita não depende do seu peso pois qualquer mulher pode ter",
+  
   "Melhorar as dores nas costas que o core fraco provoca",
   "Melhorar o intestino preso pela ativação do core profundo",
   "Melhorar as cólicas menstruais",
