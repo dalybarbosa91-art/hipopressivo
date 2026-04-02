@@ -529,6 +529,7 @@ const Hipopressivo = () => {
                     QUERO COMEÇAR MINHA TRANSFORMAÇÃO
                   </button>
                 </a>
+                <p className="text-primary font-body text-sm font-semibold mt-3">🔒 Compra Segura</p>
               </div>
               <div className="bg-secondary/50 px-8 py-4 text-center">
                 <p className="text-sm text-muted-foreground font-body">
