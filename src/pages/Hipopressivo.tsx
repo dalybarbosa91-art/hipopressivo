@@ -192,12 +192,12 @@ const Hipopressivo = () => {
                   Apenas 5 minutos por dia. Sem abdominal tradicional. Sem dieta restritiva. Sem equipamento.
                 </p>
                 <a href={CTA_LINK} target="_blank" rel="noopener noreferrer">
-                  <button className="bg-primary text-primary-foreground font-heading text-2xl px-10 py-4 rounded-lg cta-pulse hover:shadow-[0_0_25px_hsl(347_78%_55%/0.7)] transition-shadow">
-                    QUERO COMEÇAR AGORA
+                  <button className="bg-primary text-primary-foreground font-heading text-2xl px-10 py-4 rounded-lg cta-pulse hover:shadow-[0_0_25px_hsl(347_78%_55%/0.7)] transition-shadow mx-0">
+                    QUERO COMEÇAR MINHA TRANSFORMAÇÃO
                   </button>
                 </a>
-                <p className="text-muted-foreground text-sm mt-4">
-                  Acesso imediato. Garantia de 7 dias. Sem equipamento.
+                <p className="text-muted-foreground text-sm mt-4 mx-[50px]">
+                  ​
                 </p>
               </div>
             </ScrollReveal>
