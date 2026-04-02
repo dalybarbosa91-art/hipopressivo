@@ -583,7 +583,7 @@ const Hipopressivo = () => {
             <p className="font-body text-muted-foreground text-lg mb-8 max-w-xl mx-auto">
               5 minutos por dia. 12 semanas. Até 12cm de cintura. Sem abdominal. Sem dieta.
             </p>
-            <a href={CTA_LINK} target="_blank" rel="noopener noreferrer">
+            <a href="#investimento">
               <button className="bg-primary text-primary-foreground font-heading text-2xl px-12 py-5 rounded-lg cta-pulse hover:shadow-[0_0_25px_hsl(347_78%_55%/0.7)] transition-shadow">
                 QUERO COMEÇAR MINHA TRANSFORMAÇÃO
               </button>
