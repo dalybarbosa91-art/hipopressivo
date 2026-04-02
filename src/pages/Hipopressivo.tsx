@@ -145,7 +145,7 @@ const Hipopressivo = () => {
           </nav>
 
           <a href="#investimento" className="hidden md:block">
-            <button className="bg-primary text-primary-foreground font-heading px-6 py-2 rounded-lg cta-pulse hover:shadow-[0_0_25px_hsl(347_78%_55%/0.7)] transition-shadow text-lg">
+            <button className="bg-primary text-primary-foreground font-heading px-6 py-2 cta-pulse hover:shadow-[0_0_25px_hsl(347_78%_55%/0.7)] transition-shadow text-lg rounded-xl mx-0">
               Quero Começar
             </button>
           </a>
