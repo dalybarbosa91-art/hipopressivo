@@ -162,7 +162,7 @@ const Hipopressivo = () => {
                 {link.label}
               </a>
             ))}
-            <a href={CTA_LINK} target="_blank" rel="noopener noreferrer" className="block mt-2">
+            <a href="#investimento" onClick={() => setMenuOpen(false)} className="block mt-2">
               <button className="w-full bg-primary text-primary-foreground font-heading text-sm px-6 py-3 rounded-lg cta-pulse">
                 Quero Começar
               </button>
