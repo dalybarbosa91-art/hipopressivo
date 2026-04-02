@@ -1,6 +1,6 @@
 import { useState } from "react";
 import logoImg from "@/assets/logo-daly.png";
-import { Menu, X, Check, AlertTriangle, Calendar, CheckSquare, BarChart2 } from "lucide-react";
+import { Menu, X, Check, AlertTriangle, Calendar, CheckSquare, BarChart2, Ruler, Shrink, Activity, Shirt, Camera, Sparkles, Zap, Heart, Moon, ArrowUpRight, type LucideIcon } from "lucide-react";
 import ScrollReveal from "@/components/ScrollReveal";
 import GlowCard from "@/components/GlowCard";
 import TypewriterText from "@/components/TypewriterText";
@@ -28,18 +28,17 @@ const TICKER_ITEMS = [
   "Garantia incondicional de 7 dias",
 ];
 
-const PAIN_ITEMS = [
-  "Perder de 4 a 12cm de volume abdominal em 12 semanas",
-  "Eliminar a barriga projetada para frente de dentro para fora",
-  "Melhorar o aspecto da barriga em circunferência e tônus muscular",
-  "Vestir as roupas que você parou de usar porque a barriga aparecia",
-  "Tirar fotos nas férias sem se preocupar com o ângulo",
-  "Se sentir mais segura, confiante e bonita e isso vai refletir em tudo ao seu redor",
-  
-  "Melhorar as dores nas costas que o core fraco provoca",
-  "Melhorar o intestino preso pela ativação do core profundo",
-  "Melhorar as cólicas menstruais",
-  "Melhorar a postura de forma automática e permanente",
+const PAIN_ITEMS: { text: string; icon: LucideIcon }[] = [
+  { text: "Perder de 4 a 12cm de volume abdominal em 12 semanas", icon: Ruler },
+  { text: "Eliminar a barriga projetada para frente de dentro para fora", icon: Shrink },
+  { text: "Melhorar o aspecto da barriga em circunferência e tônus muscular", icon: Activity },
+  { text: "Vestir as roupas que você parou de usar porque a barriga aparecia", icon: Shirt },
+  { text: "Tirar fotos nas férias sem se preocupar com o ângulo", icon: Camera },
+  { text: "Se sentir mais segura, confiante e bonita e isso vai refletir em tudo ao seu redor", icon: Sparkles },
+  { text: "Melhorar as dores nas costas que o core fraco provoca", icon: Zap },
+  { text: "Melhorar o intestino preso pela ativação do core profundo", icon: Heart },
+  { text: "Melhorar as cólicas menstruais", icon: Moon },
+  { text: "Melhorar a postura de forma automática e permanente", icon: ArrowUpRight },
 ];
 
 const ENEMY_CARDS = [
@@ -253,12 +252,12 @@ const Hipopressivo = () => {
             <h3 className="font-heading text-3xl text-center text-foreground mb-8">O que vai mudar na sua vida</h3>
           </ScrollReveal>
 
-          <div className="grid md:grid-cols-2 gap-3 max-w-3xl mx-auto">
-            {PAIN_ITEMS.map((item, i) => (
+          <div className="grid grid-cols-1 md:grid-cols-2 gap-4 max-w-5xl mx-auto">
+            {PAIN_ITEMS.map(({ text, icon: Icon }, i) => (
               <ScrollReveal key={i} delay={i * 0.05}>
-                <div className="flex items-start gap-3 bg-card border border-border rounded-lg p-4">
-                  <Check className="text-primary size-5 mt-0.5 flex-shrink-0" />
-                  <span className="font-body text-sm text-muted-foreground">{item}</span>
+                <div className="benefit-card">
+                  <Icon className="benefit-icon size-[22px] shrink-0" />
+                  <span className="font-body text-base leading-relaxed text-foreground">{text}</span>
                 </div>
               </ScrollReveal>
             ))}
