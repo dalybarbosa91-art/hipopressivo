@@ -533,7 +533,7 @@ const Hipopressivo = () => {
               </div>
               <div className="bg-secondary/50 px-8 py-4 text-center">
                 <p className="text-sm text-muted-foreground font-body">
-                  Garantia incondicional de 7 dias. Se em 7 dias você não ficar satisfeita, devolvemos 100% do seu investimento. Sem perguntas, sem burocracia.
+                  Garantia de 7 dias — Se em 7 dias você não ficar satisfeita, devolvemos 100% do seu dinheiro.
                 </p>
               </div>
             </div>
