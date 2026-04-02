@@ -191,7 +191,7 @@ const Hipopressivo = () => {
                 <p className="font-body text-lg text-muted-foreground mb-8 max-w-xl">
                   Apenas 5 minutos por dia. Sem abdominal tradicional. Sem dieta restritiva. Sem equipamento.
                 </p>
-                <a href={CTA_LINK} target="_blank" rel="noopener noreferrer">
+                <a href="#investimento">
                   <button className="bg-primary text-primary-foreground font-heading text-2xl px-10 py-4 rounded-lg cta-pulse hover:shadow-[0_0_25px_hsl(347_78%_55%/0.7)] transition-shadow mx-0">
                     QUERO COMEÇAR MINHA TRANSFORMAÇÃO
                   </button>
