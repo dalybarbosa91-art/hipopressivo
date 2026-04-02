@@ -1,18 +1,18 @@
 import ScrollReveal from "@/components/ScrollReveal";
-import { Check } from "lucide-react";
+import { Ruler, Shrink, Activity, Shirt, Camera, Sparkles, Zap, Heart, Moon, ArrowUpRight, Star, type LucideIcon } from "lucide-react";
 
-const BENEFITS = [
-  "Perder de 4 a 12cm de volume abdominal em 12 semanas",
-  "Eliminar a barriga projetada para frente de dentro para fora",
-  "Melhorar o aspecto da barriga — circunferencia e tonus muscular",
-  "Vestir as roupas que voce parou de usar porque a barriga aparecia",
-  "Tirar fotos nas ferias sem se preocupar com o angulo",
-  "Se sentir mais segura, confiante e bonita — e isso vai refletir em tudo ao seu redor",
-  "Descobrir que barriga bonita nao depende do seu peso — qualquer mulher pode ter",
-  "Melhorar as dores nas costas que o core fraco provoca",
-  "Melhorar o intestino preso pela ativacao do core profundo",
-  "Melhorar as colicas menstruais",
-  "Melhorar a postura de forma automatica e permanente",
+const BENEFITS: { text: string; icon: LucideIcon }[] = [
+  { text: "Perder de 4 a 12cm de volume abdominal em 12 semanas", icon: Ruler },
+  { text: "Eliminar a barriga projetada para frente de dentro para fora", icon: Shrink },
+  { text: "Melhorar o aspecto da barriga — circunferencia e tonus muscular", icon: Activity },
+  { text: "Vestir as roupas que voce parou de usar porque a barriga aparecia", icon: Shirt },
+  { text: "Tirar fotos nas ferias sem se preocupar com o angulo", icon: Camera },
+  { text: "Se sentir mais segura, confiante e bonita — e isso vai refletir em tudo ao seu redor", icon: Sparkles },
+  { text: "Descobrir que barriga bonita nao depende do seu peso — qualquer mulher pode ter", icon: Star },
+  { text: "Melhorar as dores nas costas que o core fraco provoca", icon: Zap },
+  { text: "Melhorar o intestino preso pela ativacao do core profundo", icon: Heart },
+  { text: "Melhorar as colicas menstruais", icon: Moon },
+  { text: "Melhorar a postura de forma automatica e permanente", icon: ArrowUpRight },
 ];
 
 const PainSection = () => (
@@ -32,14 +32,21 @@ const PainSection = () => (
         <h3 className="font-heading text-2xl md:text-3xl font-bold text-foreground mb-8">
           O que vai mudar na sua vida:
         </h3>
-        <ul className="space-y-4 mb-10">
-          {BENEFITS.map((b, i) => (
-            <li key={i} className="flex items-start gap-3">
-              <Check className="text-primary shrink-0 mt-1" size={20} />
-              <span className="text-foreground text-base leading-relaxed">{b}</span>
-            </li>
-          ))}
-        </ul>
+        <div className="grid grid-cols-1 md:grid-cols-2 gap-4 mb-10">
+          {BENEFITS.map((b, i) => {
+            const Icon = b.icon;
+            return (
+              <div
+                key={i}
+                className="flex items-center gap-4 rounded-xl border-l-[3px] p-5"
+                style={{ backgroundColor: '#1E1E1E', borderLeftColor: '#C49A6C' }}
+              >
+                <Icon className="shrink-0" size={22} style={{ color: '#C49A6C' }} />
+                <span className="text-foreground text-base leading-relaxed">{b.text}</span>
+              </div>
+            );
+          })}
+        </div>
       </ScrollReveal>
 
       <ScrollReveal delay={0.3}>
