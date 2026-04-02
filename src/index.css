@@ -38,6 +38,8 @@
 
     --primary-light: 350 100% 70%;
     --surface-dark: 0 0% 3.1%;
+    --benefit-card: 0 0% 11.8%;
+    --benefit-accent: 31 43% 59.6%;
 
     --sidebar-background: 0 0% 5.1%;
     --sidebar-foreground: 0 0% 100%;
@@ -100,5 +102,15 @@
     background: hsl(347 78% 55% / 0.1);
     color: hsl(var(--primary));
     border: 1px solid hsl(347 78% 55% / 0.3);
+  }
+
+  .benefit-card {
+    @apply flex items-center gap-4 rounded-xl p-5;
+    background-color: hsl(var(--benefit-card));
+    border-left: 3px solid hsl(var(--benefit-accent));
+  }
+
+  .benefit-icon {
+    color: hsl(var(--benefit-accent));
   }
 }
