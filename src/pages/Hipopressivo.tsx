@@ -144,7 +144,7 @@ const Hipopressivo = () => {
             ))}
           </nav>
 
-          <a href={CTA_LINK} target="_blank" rel="noopener noreferrer" className="hidden md:block">
+          <a href="#investimento" className="hidden md:block">
             <button className="bg-primary text-primary-foreground font-heading px-6 py-2 rounded-lg cta-pulse hover:shadow-[0_0_25px_hsl(347_78%_55%/0.7)] transition-shadow text-lg">
               Quero Começar
             </button>
