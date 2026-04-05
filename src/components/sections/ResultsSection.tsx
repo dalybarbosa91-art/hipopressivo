@@ -1,11 +1,18 @@
 import ScrollReveal from "@/components/ScrollReveal";
-import GlowCard from "@/components/GlowCard";
+import { Carousel, CarouselContent, CarouselItem, CarouselPrevious, CarouselNext } from "@/components/ui/carousel";
 
-const RESULTS = [
-  { label: "— 8cm de cintura" },
-  { label: "— 10cm de cintura" },
-  { label: "— 6cm de cintura" },
-];
+import result01 from "@/assets/results/result-01.png";
+import result02 from "@/assets/results/result-02.png";
+import result03 from "@/assets/results/result-03.png";
+import result05 from "@/assets/results/result-05.png";
+import result06 from "@/assets/results/result-06.png";
+import result07 from "@/assets/results/result-07.png";
+import result08 from "@/assets/results/result-08.png";
+import result09 from "@/assets/results/result-09.png";
+import result10 from "@/assets/results/result-10.png";
+import result12 from "@/assets/results/result-12.png";
+
+const IMAGES = [result12, result01, result02, result03, result05, result06, result07, result08, result09, result10];
 
 const ResultsSection = () => (
   <section id="resultados" className="py-20 bg-card">
@@ -20,18 +27,25 @@ const ResultsSection = () => (
         </p>
       </ScrollReveal>
 
-      <div className="grid md:grid-cols-2 lg:grid-cols-3 gap-6">
-        {RESULTS.map((r, i) => (
-          <ScrollReveal key={i} delay={i * 0.1}>
-            <GlowCard className="p-0">
-              <div className="w-full h-72 bg-primary/10 rounded-lg flex items-center justify-center">
-                <p className="text-primary text-sm text-center px-4">[ Foto de resultado ]</p>
-              </div>
-              <p className="text-primary font-bold text-center text-lg py-4">{r.label}</p>
-            </GlowCard>
-          </ScrollReveal>
-        ))}
-      </div>
+      <ScrollReveal delay={0.1}>
+        <div className="relative px-12">
+          <Carousel opts={{ loop: true }} className="w-full">
+            <CarouselContent>
+              {IMAGES.map((src, i) => (
+                <CarouselItem key={i}>
+                  <img
+                    src={src}
+                    alt={`Resultado antes e depois ${i + 1}`}
+                    className="w-full h-auto rounded-xl object-contain max-h-[500px] mx-auto"
+                  />
+                </CarouselItem>
+              ))}
+            </CarouselContent>
+            <CarouselPrevious className="border-none bg-primary/30 hover:bg-primary/50 text-primary-foreground backdrop-blur-sm -left-6 h-10 w-10" />
+            <CarouselNext className="border-none bg-primary/30 hover:bg-primary/50 text-primary-foreground backdrop-blur-sm -right-6 h-10 w-10" />
+          </Carousel>
+        </div>
+      </ScrollReveal>
     </div>
   </section>
 );
