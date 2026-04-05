@@ -44,7 +44,8 @@ const EnemySection = () => (
               <p className="text-muted-foreground text-sm leading-relaxed">{card.text}</p>
             </div>
           </ScrollReveal>
-        ))}
+          );
+        })}
       </div>
 
       <ScrollReveal delay={0.3}>
