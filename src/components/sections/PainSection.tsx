@@ -39,9 +39,9 @@ const PainSection = () => (
               <div
                 key={i}
                 className="flex items-center gap-4 rounded-xl border-l-[3px] p-5"
-                style={{ backgroundColor: '#1E1E1E', borderLeftColor: '#C49A6C' }}
+                style={{ backgroundColor: '#1E1E1E', borderLeftColor: 'hsl(var(--primary))' }}
               >
-                <Icon className="shrink-0" size={22} style={{ color: '#C49A6C' }} />
+                <Icon className="shrink-0" size={22} style={{ color: 'hsl(var(--primary))' }} />
                 <span className="text-foreground text-base leading-relaxed">{b.text}</span>
               </div>
             );
