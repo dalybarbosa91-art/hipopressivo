@@ -365,7 +365,7 @@ const Hipopressivo = () => {
                   Qualquer mulher consegue fazer o protocolo e ter resultado
                 </p>
                 <p className="font-heading text-4xl text-primary">
-                  menos 4 a 12cm de cintura em 12 semanas
+                  menos 4 a 12cm de cintura em até 12 semanas
                 </p>
               </GlowCard>
             </ScrollReveal>
