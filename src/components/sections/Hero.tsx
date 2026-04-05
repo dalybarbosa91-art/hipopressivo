@@ -1,4 +1,5 @@
 import ScrollReveal from "@/components/ScrollReveal";
+import heroDaly from "@/assets/hero-daly.png";
 import { Button } from "@/components/ui/button";
 import { CTA_LINK } from "@/components/Ticker";
 
@@ -28,11 +29,11 @@ const Hero = () => (
 
         <ScrollReveal delay={0.2}>
           <div className="relative">
-            <div className="w-full aspect-[3/4] rounded-2xl bg-secondary glow-image flex items-center justify-center p-8">
-              <p className="text-primary text-center font-body text-sm leading-relaxed">
-                [ Foto da Daly executando a tecnica hipopressiva — corpo inteiro, fundo escuro ]
-              </p>
-            </div>
+            <img
+              src={heroDaly}
+              alt="Daly executando técnica hipopressiva"
+              className="w-full rounded-2xl glow-image object-cover"
+            />
           </div>
         </ScrollReveal>
       </div>
