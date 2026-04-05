@@ -59,7 +59,7 @@ const ENEMY_CARDS = [
 const MECHANISM_STEPS = [
   { num: "01", title: "EXPIRE", desc: "Expira todo o ar dos pulmões completamente, preparando o diafragma." },
   { num: "02", title: "APNEIA", desc: "Abre as costelas sem inspirar, criando pressão negativa dentro da cavidade torácica." },
-  { num: "03", title: "ATIVAÇÃO", desc: "O transverso é ativado de forma reflexa. Com a prática regular, mantém essa ativação no dia a dia." },
+  { num: "03", title: "ATIVAÇÃO", desc: "O transverso é ativado com a prática regular, mantém essa ativação no dia a dia." },
 ];
 
 const FOR_WHO_ITEMS = [
