@@ -1,4 +1,5 @@
 import ScrollReveal from "@/components/ScrollReveal";
+import heroDaly from "@/assets/hero-daly.png";
 import { Button } from "@/components/ui/button";
 import { CTA_LINK } from "@/components/Ticker";
 
