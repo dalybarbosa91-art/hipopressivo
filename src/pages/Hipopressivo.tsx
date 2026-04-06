@@ -5,6 +5,12 @@ import ScrollReveal from "@/components/ScrollReveal";
 import GlowCard from "@/components/GlowCard";
 import TypewriterText from "@/components/TypewriterText";
 import { Carousel, CarouselContent, CarouselItem, CarouselPrevious, CarouselNext } from "@/components/ui/carousel";
+import {
+  Accordion,
+  AccordionContent,
+  AccordionItem,
+  AccordionTrigger,
+} from "@/components/ui/accordion";
 
 import result01 from "@/assets/results/result-01.png";
 import result02 from "@/assets/results/result-02.png";
@@ -18,12 +24,6 @@ import result10 from "@/assets/results/result-10.png";
 import result12 from "@/assets/results/result-12.png";
 
 const RESULT_IMAGES = [result12, result01, result02, result03, result05, result06, result07, result08, result09, result10];
-import {
-  Accordion,
-  AccordionContent,
-  AccordionItem,
-  AccordionTrigger,
-} from "@/components/ui/accordion";
 
 const CTA_LINK = "https://pay.kiwify.com.br/5mIQ0ua";
 
