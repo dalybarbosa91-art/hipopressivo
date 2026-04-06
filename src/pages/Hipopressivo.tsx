@@ -12,18 +12,18 @@ import {
   AccordionTrigger,
 } from "@/components/ui/accordion";
 
-import result01 from "@/assets/results/result-01.png";
-import result02 from "@/assets/results/result-02.png";
-import result03 from "@/assets/results/result-03.png";
-import result05 from "@/assets/results/result-05.png";
-import result06 from "@/assets/results/result-06.png";
-import result07 from "@/assets/results/result-07.png";
-import result08 from "@/assets/results/result-08.png";
-import result09 from "@/assets/results/result-09.png";
-import result10 from "@/assets/results/result-10.png";
-import result12 from "@/assets/results/result-12.png";
-
-const RESULT_IMAGES = [result12, result01, result02, result03, result05, result06, result07, result08, result09, result10];
+const RESULT_IMAGES = [
+  "/results/result-12.png",
+  "/results/result-01.png",
+  "/results/result-02.png",
+  "/results/result-03.png",
+  "/results/result-05.png",
+  "/results/result-06.png",
+  "/results/result-07.png",
+  "/results/result-08.png",
+  "/results/result-09.png",
+  "/results/result-10.png",
+];
 
 const CTA_LINK = "https://pay.kiwify.com.br/5mIQ0ua";
 
