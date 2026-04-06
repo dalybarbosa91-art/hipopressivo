@@ -1,5 +1,6 @@
 import { useState } from "react";
 import logoImg from "@/assets/logo-daly.png";
+import heroDaly from "@/assets/hero-daly.png";
 import { Menu, X, Check, MoveDown, ShieldOff, Calendar, CheckSquare, BarChart2, Ruler, Shrink, Activity, Shirt, Camera, Sparkles, Zap, Heart, Moon, ArrowUpRight, type LucideIcon } from "lucide-react";
 import ScrollReveal from "@/components/ScrollReveal";
 import GlowCard from "@/components/GlowCard";
