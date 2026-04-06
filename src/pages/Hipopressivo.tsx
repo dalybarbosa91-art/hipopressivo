@@ -209,7 +209,7 @@ const Hipopressivo = () => {
                   Apenas 5 minutos por dia. Sem abdominal tradicional. Sem dieta restritiva. Sem equipamento.
                 </p>
                 <a href="#investimento">
-                  <button className="bg-primary text-primary-foreground font-heading text-2xl px-10 py-4 rounded-lg cta-pulse hover:shadow-[0_0_25px_hsl(347_78%_55%/0.7)] transition-shadow mx-0">
+                  <button className="bg-primary text-primary-foreground font-heading text-base md:text-2xl px-6 md:px-10 py-3 md:py-4 rounded-lg cta-pulse hover:shadow-[0_0_25px_hsl(347_78%_55%/0.7)] transition-shadow mx-0">
                     QUERO COMEÇAR MINHA TRANSFORMAÇÃO
                   </button>
                 </a>
@@ -221,12 +221,11 @@ const Hipopressivo = () => {
 
             <ScrollReveal delay={0.2}>
               <div className="relative">
-                <div className="absolute -inset-1 bg-gradient-to-b from-primary/40 to-transparent rounded-2xl blur-md" />
-                <div className="relative rounded-2xl bg-primary/10 min-h-[400px] flex items-center justify-center">
-                  <p className="text-primary text-sm text-center p-8">
-                    Foto da Daly executando a técnica hipopressiva. Corpo inteiro. Fundo escuro.
-                  </p>
-                </div>
+                <img
+                  src={heroDaly}
+                  alt="Daly executando técnica hipopressiva"
+                  className="w-full rounded-2xl glow-image object-cover"
+                />
               </div>
             </ScrollReveal>
           </div>
@@ -412,7 +411,7 @@ const Hipopressivo = () => {
               <Carousel opts={{ loop: true }} className="w-full">
                 <CarouselContent>
                   {RESULT_IMAGES.map((src, i) => (
-                    <CarouselItem key={i}>
+                    <CarouselItem key={i} className="md:basis-1/2">
                       <img
                         src={src}
                         alt={`Resultado antes e depois ${i + 1}`}
@@ -550,7 +549,7 @@ const Hipopressivo = () => {
                 </ul>
 
                 <a href={CTA_LINK} target="_blank" rel="noopener noreferrer" className="block">
-                  <button className="w-full bg-primary text-primary-foreground font-heading text-2xl py-4 rounded-lg cta-pulse hover:shadow-[0_0_25px_hsl(347_78%_55%/0.7)] transition-shadow">
+                  <button className="w-full bg-primary text-primary-foreground font-heading text-base md:text-2xl py-3 md:py-4 rounded-lg cta-pulse hover:shadow-[0_0_25px_hsl(347_78%_55%/0.7)] transition-shadow">
                     QUERO COMEÇAR MINHA TRANSFORMAÇÃO
                   </button>
                 </a>
@@ -609,7 +608,7 @@ const Hipopressivo = () => {
               5 minutos por dia. 12 semanas. Até 12cm de cintura. Sem abdominal. Sem dieta.
             </p>
             <a href="#investimento">
-              <button className="bg-primary text-primary-foreground font-heading text-2xl px-12 py-5 rounded-lg cta-pulse hover:shadow-[0_0_25px_hsl(347_78%_55%/0.7)] transition-shadow">
+              <button className="bg-primary text-primary-foreground font-heading text-base md:text-2xl px-6 md:px-12 py-3 md:py-5 rounded-lg cta-pulse hover:shadow-[0_0_25px_hsl(347_78%_55%/0.7)] transition-shadow">
                 QUERO COMEÇAR MINHA TRANSFORMAÇÃO
               </button>
             </a>
