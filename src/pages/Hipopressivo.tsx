@@ -220,11 +220,11 @@ const Hipopressivo = () => {
             </ScrollReveal>
 
             <ScrollReveal delay={0.2}>
-              <div className="relative">
+              <div className="relative flex items-center justify-center">
                 <img
                   src={heroDaly}
                   alt="Daly executando técnica hipopressiva"
-                  className="w-full rounded-2xl glow-image object-cover"
+                  className="w-3/4 md:w-4/5 max-h-[500px] rounded-2xl glow-image object-cover mx-auto"
                 />
               </div>
             </ScrollReveal>
@@ -406,25 +406,24 @@ const Hipopressivo = () => {
             </p>
           </ScrollReveal>
 
-          <ScrollReveal delay={0.1}>
-            <div className="relative px-12">
-              <Carousel opts={{ loop: true }} className="w-full">
-                <CarouselContent>
+          <div className="relative px-14">
+              <Carousel opts={{ loop: true, align: "start" }} className="w-full">
+                <CarouselContent className="-ml-4">
                   {RESULT_IMAGES.map((src, i) => (
-                    <CarouselItem key={i} className="md:basis-1/2">
+                    <CarouselItem key={i} className="pl-4 basis-full md:basis-1/2">
                       <img
                         src={src}
                         alt={`Resultado antes e depois ${i + 1}`}
                         className="w-full h-auto rounded-xl object-contain max-h-[500px] mx-auto"
+                        loading="lazy"
                       />
                     </CarouselItem>
                   ))}
                 </CarouselContent>
-                <CarouselPrevious className="border-none bg-primary/30 hover:bg-primary/50 text-primary-foreground backdrop-blur-sm -left-6 h-10 w-10" />
-                <CarouselNext className="border-none bg-primary/30 hover:bg-primary/50 text-primary-foreground backdrop-blur-sm -right-6 h-10 w-10" />
+                <CarouselPrevious className="border-none bg-primary/30 hover:bg-primary/50 text-primary-foreground backdrop-blur-sm -left-8 h-10 w-10" />
+                <CarouselNext className="border-none bg-primary/30 hover:bg-primary/50 text-primary-foreground backdrop-blur-sm -right-8 h-10 w-10" />
               </Carousel>
             </div>
-          </ScrollReveal>
         </div>
       </section>
 
