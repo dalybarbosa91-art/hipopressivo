@@ -18,7 +18,6 @@ import result10 from "@/assets/results/result-10.png";
 import result12 from "@/assets/results/result-12.png";
 
 const RESULT_IMAGES = [result12, result01, result02, result03, result05, result06, result07, result08, result09, result10];
-import TypewriterText from "@/components/TypewriterText";
 import {
   Accordion,
   AccordionContent,
