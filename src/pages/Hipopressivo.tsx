@@ -1,6 +1,6 @@
 import { useState } from "react";
 import logoImg from "@/assets/logo-daly.png";
-import { Menu, X, Check, AlertTriangle, Calendar, CheckSquare, BarChart2, Ruler, Shrink, Activity, Shirt, Camera, Sparkles, Zap, Heart, Moon, ArrowUpRight, type LucideIcon } from "lucide-react";
+import { Menu, X, Check, MoveDown, ShieldOff, Calendar, CheckSquare, BarChart2, Ruler, Shrink, Activity, Shirt, Camera, Sparkles, Zap, Heart, Moon, ArrowUpRight, type LucideIcon } from "lucide-react";
 import ScrollReveal from "@/components/ScrollReveal";
 import GlowCard from "@/components/GlowCard";
 import TypewriterText from "@/components/TypewriterText";
@@ -41,18 +41,21 @@ const PAIN_ITEMS: { text: string; icon: LucideIcon }[] = [
   { text: "Melhorar a postura de forma automática e permanente", icon: ArrowUpRight },
 ];
 
-const ENEMY_CARDS = [
+const ENEMY_CARDS: { title: string; text: string; icon: LucideIcon }[] = [
   {
     title: "O Abdominal Tradicional",
     text: "Cada repetição aumenta a pressão dentro da cavidade abdominal. Essa pressão vai para frente. Com o tempo, seu corpo aprende a projetar a barriga. Quanto mais você faz, mais a barriga projeta.",
+    icon: Zap,
   },
   {
     title: "A Prancha Convencional",
     text: "Sem a ativação do core profundo primeiro, a prancha força o abdômen para baixo e para frente. Prancha sem transverso ativo não resolve e pode até agravar.",
+    icon: MoveDown,
   },
   {
     title: "A Cinta Modeladora",
     text: "A cinta faz o trabalho que o seu transverso deveria fazer. Com o uso contínuo, o músculo atrofia. Quando você tira, a barriga volta ainda mais projetada.",
+    icon: ShieldOff,
   },
 ];
 
@@ -287,15 +290,18 @@ const Hipopressivo = () => {
           </ScrollReveal>
 
           <div className="grid md:grid-cols-3 gap-6 max-w-5xl mx-auto">
-            {ENEMY_CARDS.map((card, i) => (
-              <ScrollReveal key={i} delay={i * 0.1}>
-                <GlowCard className="p-8">
-                  <AlertTriangle className="text-primary size-8 mb-4" />
-                  <h3 className="font-heading text-2xl text-foreground mb-3">{card.title}</h3>
-                  <p className="font-body text-muted-foreground text-sm leading-relaxed">{card.text}</p>
-                </GlowCard>
-              </ScrollReveal>
-            ))}
+            {ENEMY_CARDS.map((card, i) => {
+              const Icon = card.icon;
+              return (
+                <ScrollReveal key={i} delay={i * 0.1}>
+                  <GlowCard className="p-8">
+                    <Icon className="text-primary size-8 mb-4" />
+                    <h3 className="font-heading text-2xl text-foreground mb-3">{card.title}</h3>
+                    <p className="font-body text-muted-foreground text-sm leading-relaxed">{card.text}</p>
+                  </GlowCard>
+                </ScrollReveal>
+              );
+            })}
           </div>
 
           <ScrollReveal delay={0.3}>
@@ -374,32 +380,37 @@ const Hipopressivo = () => {
       </section>
 
       {/* SEÇÃO RESULTADOS */}
-      <section id="resultados" className="py-20 bg-background">
-        <div className="container mx-auto px-4">
+      <section id="resultados" className="py-20 bg-card">
+        <div className="container mx-auto px-4 max-w-5xl">
           <ScrollReveal>
-            <div className="text-center mb-12">
-              <span className="label-tag mb-6 inline-block">RESULTADOS REAIS</span>
-              <h2 className="font-heading text-4xl md:text-5xl text-foreground mb-4">
-                Mulheres que transformaram a silhueta com o método hipopressivo
-              </h2>
-              <p className="font-body text-muted-foreground text-xs">
-                Resultados obtidos com a prática do método hipopressivo. Resultados individuais podem variar.
-              </p>
-            </div>
+            <span className="label-tag mb-6 inline-block">RESULTADOS REAIS</span>
+            <h2 className="font-heading text-3xl md:text-4xl font-bold text-foreground mb-2">
+              Mulheres que transformaram a silhueta com o método hipopressivo
+            </h2>
+            <p className="text-muted-foreground text-sm mb-12">
+              Resultados obtidos com a prática do método hipopressivo. Resultados individuais podem variar.
+            </p>
           </ScrollReveal>
 
-          <div className="grid md:grid-cols-2 lg:grid-cols-3 gap-6 max-w-5xl mx-auto">
-            {RESULTS.map((result, i) => (
-              <ScrollReveal key={i} delay={i * 0.1}>
-                <GlowCard>
-                  <div className="w-full h-72 bg-primary/10 rounded-lg flex items-center justify-center mb-4">
-                    <p className="text-primary text-sm text-center p-8">Foto de resultado</p>
-                  </div>
-                  <p className="font-heading text-xl text-primary text-center pb-4">{result}</p>
-                </GlowCard>
-              </ScrollReveal>
-            ))}
-          </div>
+          <ScrollReveal delay={0.1}>
+            <div className="relative px-12">
+              <Carousel opts={{ loop: true }} className="w-full">
+                <CarouselContent>
+                  {RESULT_IMAGES.map((src, i) => (
+                    <CarouselItem key={i}>
+                      <img
+                        src={src}
+                        alt={`Resultado antes e depois ${i + 1}`}
+                        className="w-full h-auto rounded-xl object-contain max-h-[500px] mx-auto"
+                      />
+                    </CarouselItem>
+                  ))}
+                </CarouselContent>
+                <CarouselPrevious className="border-none bg-primary/30 hover:bg-primary/50 text-primary-foreground backdrop-blur-sm -left-6 h-10 w-10" />
+                <CarouselNext className="border-none bg-primary/30 hover:bg-primary/50 text-primary-foreground backdrop-blur-sm -right-6 h-10 w-10" />
+              </Carousel>
+            </div>
+          </ScrollReveal>
         </div>
       </section>
 
