@@ -1,6 +1,7 @@
 import { useState } from "react";
 import logoImg from "@/assets/logo-daly.png";
 import heroDaly from "@/assets/hero-daly.png";
+import dalyAuthority from "@/assets/daly-authority.png";
 import { Menu, X, Check, MoveDown, ShieldOff, Calendar, CheckSquare, BarChart2, Ruler, Shrink, Activity, Shirt, Camera, Sparkles, Zap, Heart, Moon, ArrowUpRight, type LucideIcon } from "lucide-react";
 import ScrollReveal from "@/components/ScrollReveal";
 import GlowCard from "@/components/GlowCard";
@@ -483,10 +484,13 @@ const Hipopressivo = () => {
             <ScrollReveal>
               <div className="relative max-w-sm mx-auto">
                 <div className="absolute -inset-1 bg-gradient-to-b from-primary/40 to-transparent rounded-2xl blur-md" />
-                <div className="relative rounded-2xl bg-primary/10 min-h-[400px] w-full flex items-center justify-center">
-                  <p className="text-primary text-sm text-center p-8">
-                    Foto da Daly. Rosto olhando para a câmera. Fundo escuro.
-                  </p>
+                <div className="relative rounded-2xl bg-primary/10 min-h-[400px] w-full flex items-end justify-center overflow-hidden">
+                  <img
+                    src={dalyAuthority}
+                    alt="Dalyane Barbosa"
+                    className="w-full h-full max-h-[520px] object-contain object-bottom"
+                    loading="lazy"
+                  />
                 </div>
               </div>
             </ScrollReveal>
