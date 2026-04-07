@@ -2,6 +2,22 @@ import { useState } from "react";
 import logoImg from "@/assets/logo-daly.png";
 import heroDaly from "@/assets/hero-daly.png";
 import dalyAuthority from "@/assets/daly-authority.png";
+import result12 from "@/assets/results/result-12.png";
+import result01 from "@/assets/results/result-01.png";
+import result02 from "@/assets/results/result-02.png";
+import result03 from "@/assets/results/result-03.png";
+import result05 from "@/assets/results/result-05.png";
+import result06 from "@/assets/results/result-06.png";
+import result07 from "@/assets/results/result-07.png";
+import result08 from "@/assets/results/result-08.png";
+import result09 from "@/assets/results/result-09.png";
+import result10 from "@/assets/results/result-10.png";
+import moduleFundamentos from "@/assets/modules/fundamentos.png";
+import modulePosturasBase from "@/assets/modules/posturas-base.png";
+import modulePosturasAvancadas from "@/assets/modules/posturas-avancadas.png";
+import moduleCombinacoes from "@/assets/modules/combinacoes-pratica.png";
+import moduleAvaliacaoCorporal from "@/assets/modules/avaliacao-corporal.png";
+import moduleSuperCore from "@/assets/modules/supercore.png";
 import { Menu, X, Check, MoveDown, ShieldOff, Calendar, CheckSquare, BarChart2, Ruler, Shrink, Activity, Shirt, Camera, Sparkles, Zap, Heart, Moon, ArrowUpRight, type LucideIcon } from "lucide-react";
 import ScrollReveal from "@/components/ScrollReveal";
 import GlowCard from "@/components/GlowCard";
@@ -15,16 +31,16 @@ import {
 } from "@/components/ui/accordion";
 
 const RESULT_IMAGES = [
-  "/results/result-12.png",
-  "/results/result-01.png",
-  "/results/result-02.png",
-  "/results/result-03.png",
-  "/results/result-05.png",
-  "/results/result-06.png",
-  "/results/result-07.png",
-  "/results/result-08.png",
-  "/results/result-09.png",
-  "/results/result-10.png",
+  result12,
+  result01,
+  result02,
+  result03,
+  result05,
+  result06,
+  result07,
+  result08,
+  result09,
+  result10,
 ];
 
 const CTA_LINK = "https://pay.kiwify.com.br/5mIQ0ua";
@@ -99,12 +115,36 @@ const RESULTS = [
 ];
 
 const MODULES = [
-  { title: "Fundamentos", desc: "Entenda o que é o hipopressivo, como liberar o diafragma, dominar o ciclo de respiração e executar seu primeiro vacuum com segurança." },
-  { title: "Posturas Base", desc: "As posturas fundamentais em pé, curvada e ajoelhada. Cada variação em sequência progressiva com técnica correta antes de avançar." },
-  { title: "Posturas Avançadas", desc: "Posturas em quatro apoios, sentada e na parede em múltiplas variações. Para aprofundar os resultados quando a base está consolidada." },
-  { title: "Combinações e Prática", desc: "Como unir as posturas em sequências fluidas para uma prática completa de 5 minutos, o protocolo real do dia a dia." },
-  { title: "Avaliação Corporal", desc: "Medidas, fotos de progresso e percentual de gordura. Registre sua transformação com precisão desde o primeiro dia." },
-  { title: "Super Core", desc: "Exercícios funcionais complementares para potencializar os resultados do protocolo e fortalecer o core de forma completa." },
+  {
+    title: "Fundamentos",
+    desc: "Entenda o que é o hipopressivo, como liberar o diafragma, dominar o ciclo de respiração e executar seu primeiro vacuum com segurança.",
+    img: moduleFundamentos,
+  },
+  {
+    title: "Posturas Base",
+    desc: "As posturas fundamentais em pé, curvada e ajoelhada. Cada variação em sequência progressiva com técnica correta antes de avançar.",
+    img: modulePosturasBase,
+  },
+  {
+    title: "Posturas Avançadas",
+    desc: "Posturas em quatro apoios, sentada e na parede em múltiplas variações. Para aprofundar os resultados quando a base está consolidada.",
+    img: modulePosturasAvancadas,
+  },
+  {
+    title: "Combinações e Prática",
+    desc: "Como unir as posturas em sequências fluidas para uma prática completa de 5 minutos, o protocolo real do dia a dia.",
+    img: moduleCombinacoes,
+  },
+  {
+    title: "Avaliação Corporal",
+    desc: "Medidas, fotos de progresso e percentual de gordura. Registre sua transformação com precisão desde o primeiro dia.",
+    img: moduleAvaliacaoCorporal,
+  },
+  {
+    title: "Super Core",
+    desc: "Exercícios funcionais complementares para potencializar os resultados do protocolo e fortalecer o core de forma completa.",
+    img: moduleSuperCore,
+  },
 ];
 
 const BONUSES = [
@@ -407,24 +447,24 @@ const Hipopressivo = () => {
             </p>
           </ScrollReveal>
 
-          <div className="relative px-14">
-              <Carousel opts={{ loop: true, align: "start" }} className="w-full">
-                <CarouselContent className="-ml-4">
-                  {RESULT_IMAGES.map((src, i) => (
-                    <CarouselItem key={i} className="pl-4 basis-full md:basis-1/2">
-                      <img
-                        src={src}
-                        alt={`Resultado antes e depois ${i + 1}`}
-                        className="w-full h-auto rounded-xl object-contain max-h-[500px] mx-auto"
-                        loading="lazy"
-                      />
-                    </CarouselItem>
-                  ))}
-                </CarouselContent>
-                <CarouselPrevious className="border-none bg-primary/30 hover:bg-primary/50 text-primary-foreground backdrop-blur-sm -left-8 h-10 w-10" />
-                <CarouselNext className="border-none bg-primary/30 hover:bg-primary/50 text-primary-foreground backdrop-blur-sm -right-8 h-10 w-10" />
-              </Carousel>
-            </div>
+          <div className="relative px-4 md:px-14">
+            <Carousel opts={{ loop: true, align: "start" }} className="w-full">
+              <CarouselContent className="-ml-4">
+                {RESULT_IMAGES.map((src, i) => (
+                  <CarouselItem key={i} className="pl-4 basis-full md:basis-1/2">
+                    <img
+                      src={src}
+                      alt={`Resultado antes e depois ${i + 1}`}
+                      className="w-full h-auto rounded-xl object-contain max-h-[500px] mx-auto"
+                      loading="lazy"
+                    />
+                  </CarouselItem>
+                ))}
+              </CarouselContent>
+              <CarouselPrevious className="border-none bg-primary/30 hover:bg-primary/50 text-primary-foreground backdrop-blur-sm left-0 md:-left-8 h-10 w-10" />
+              <CarouselNext className="border-none bg-primary/30 hover:bg-primary/50 text-primary-foreground backdrop-blur-sm right-0 md:-right-8 h-10 w-10" />
+            </Carousel>
+          </div>
         </div>
       </section>
 
@@ -447,8 +487,13 @@ const Hipopressivo = () => {
             {MODULES.map((mod, i) => (
               <ScrollReveal key={i} delay={i * 0.1}>
                 <GlowCard className="p-8 hover:border-b-2 hover:border-b-primary flex flex-col h-full">
-                  <div className="w-full h-48 rounded-lg mb-4 bg-primary/10 flex items-center justify-center">
-                    <p className="text-primary text-sm text-center p-4">Imagem do módulo</p>
+                  <div className="w-full h-56 rounded-lg mb-4 overflow-hidden bg-secondary/20 flex items-center justify-center">
+                    <img
+                      src={mod.img}
+                      alt={mod.title}
+                      className="w-full h-full object-contain"
+                      loading="lazy"
+                    />
                   </div>
                   <h3 className="font-heading text-2xl text-foreground mb-2">{mod.title}</h3>
                   <p className="font-body text-muted-foreground text-sm">{mod.desc}</p>
