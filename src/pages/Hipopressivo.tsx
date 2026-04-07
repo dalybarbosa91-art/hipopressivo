@@ -198,10 +198,10 @@ const Hipopressivo = () => {
                 <span className="bg-primary/10 text-primary font-body text-sm font-semibold px-4 py-1.5 rounded-full inline-block mb-6">
                   PROTOCOLO HIPOPRESSIVO TEAM DALY
                 </span>
-                <h1 className="font-heading py-0 my-0 text-4xl opacity-95 md:text-7xl leading-tight text-foreground mb-6">
+                <h1 className="font-heading py-0 my-0 text-5xl opacity-95 md:text-7xl leading-tight text-foreground mb-6">
                   <TypewriterText
                     text="Reduza até 12cm de cintura, trate a diástase e acabe com a incontinência urinária"
-                    className="py-0 my-0 text-4xl opacity-95"
+                    className="py-0 my-0 opacity-95 text-5xl"
                     speed={25}
                     delay={300}
                   />
