@@ -2,13 +2,17 @@ import ScrollReveal from "@/components/ScrollReveal";
 import GlowCard from "@/components/GlowCard";
 import { Calendar, CheckSquare, BarChart2 } from "lucide-react";
 
+import imgFundamentos from "@/assets/modules/fundamentos.png";
+import imgCombinacoes from "@/assets/modules/combinacoes-pratica.png";
+import imgSupercore from "@/assets/modules/supercore.png";
+
 const MODULES = [
-  { title: "Fundamentos", desc: "Entenda o que e o hipopressivo, como liberar o diafragma, dominar o ciclo de respiracao e executar seu primeiro vacuum com seguranca." },
-  { title: "Posturas Base", desc: "As posturas fundamentais em pe, curvada e ajoelhada. Cada variacao em sequencia progressiva, com tecnica correta antes de avancar." },
-  { title: "Posturas Avancadas", desc: "Posturas em quatro apoios, sentada e na parede em multiplas variacoes. Para aprofundar os resultados quando a base esta consolidada." },
-  { title: "Combinacoes e Pratica", desc: "Como unir as posturas em sequencias fluidas para uma pratica completa de 5 minutos — o protocolo real do dia a dia." },
-  { title: "Avaliacao Corporal", desc: "Medidas, fotos de progresso e percentual de gordura. Registre sua transformacao com precisao desde o primeiro dia." },
-  { title: "Super Core", desc: "Exercicios funcionais complementares para potencializar os resultados do protocolo e fortalecer o core de forma completa." },
+  { title: "Fundamentos", desc: "Entenda o que e o hipopressivo, como liberar o diafragma, dominar o ciclo de respiracao e executar seu primeiro vacuum com seguranca.", img: imgFundamentos },
+  { title: "Posturas Base", desc: "As posturas fundamentais em pe, curvada e ajoelhada. Cada variacao em sequencia progressiva, com tecnica correta antes de avancar.", img: null },
+  { title: "Posturas Avancadas", desc: "Posturas em quatro apoios, sentada e na parede em multiplas variacoes. Para aprofundar os resultados quando a base esta consolidada.", img: null },
+  { title: "Combinacoes e Pratica", desc: "Como unir as posturas em sequencias fluidas para uma pratica completa de 5 minutos — o protocolo real do dia a dia.", img: imgCombinacoes },
+  { title: "Avaliacao Corporal", desc: "Medidas, fotos de progresso e percentual de gordura. Registre sua transformacao com precisao desde o primeiro dia.", img: null },
+  { title: "Super Core", desc: "Exercicios funcionais complementares para potencializar os resultados do protocolo e fortalecer o core de forma completa.", img: imgSupercore },
 ];
 
 const BONUSES = [
@@ -32,9 +36,15 @@ const ModulesSection = () => (
         {MODULES.map((mod, i) => (
           <ScrollReveal key={i} delay={i * 0.08}>
             <GlowCard>
-              <div className="h-48 w-full bg-primary/10 rounded-lg mb-4 flex items-center justify-center">
-                <span className="text-primary font-heading text-5xl font-bold opacity-30">{String(i + 1).padStart(2, "0")}</span>
-              </div>
+              {mod.img ? (
+                <div className="h-48 w-full rounded-lg mb-4 overflow-hidden">
+                  <img src={mod.img} alt={mod.title} className="w-full h-full object-cover rounded-lg" />
+                </div>
+              ) : (
+                <div className="h-48 w-full bg-primary/10 rounded-lg mb-4 flex items-center justify-center">
+                  <span className="text-primary font-heading text-5xl font-bold opacity-30">{String(i + 1).padStart(2, "0")}</span>
+                </div>
+              )}
               <h3 className="font-heading text-xl font-bold text-foreground mb-2">{mod.title}</h3>
               <p className="text-muted-foreground text-sm leading-relaxed">{mod.desc}</p>
             </GlowCard>
