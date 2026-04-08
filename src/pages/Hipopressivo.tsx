@@ -22,16 +22,17 @@ import {
 } from "@/components/ui/accordion";
 
 const RESULT_IMAGES = [
-  "/results/result-12.png",
-  "/results/result-01.png",
-  "/results/result-02.png",
-  "/results/result-03.png",
-  "/results/result-05.png",
-  "/results/result-06.png",
-  "/results/result-07.png",
-  "/results/result-08.png",
-  "/results/result-09.png",
-  "/results/result-10.png",
+  "/results/HB_Antes_e_Depois_01.png",
+  "/results/HB_Antes_e_Depois_02.png",
+  "/results/HB_Antes_e_Depois_03.png",
+  "/results/HB_Antes_e_Depois_05.png",
+  "/results/HB_Antes_e_Depois_06.png",
+  "/results/HB_Antes_e_Depois_07.png",
+  "/results/HB_Antes_e_Depois_08.png",
+  "/results/HB_Antes_e_Depois_09.png",
+  "/results/HB_Antes_e_Depois_10.png",
+  "/results/HB_Antes_e_Depois_11.png",
+  "/results/HB_Antes_e_Depois_12.png",
 ];
 
 const CTA_LINK = "https://pay.kiwify.com.br/5mIQ0ua";
