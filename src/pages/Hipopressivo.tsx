@@ -2,16 +2,7 @@ import { useState } from "react";
 import logoImg from "@/assets/logo-daly.png";
 import heroDaly from "@/assets/hero-daly.png";
 import dalyAuthority from "@/assets/daly-authority.png";
-import result12 from "@/assets/results/result-12.png";
-import result01 from "@/assets/results/result-01.png";
-import result02 from "@/assets/results/result-02.png";
-import result03 from "@/assets/results/result-03.png";
-import result05 from "@/assets/results/result-05.png";
-import result06 from "@/assets/results/result-06.png";
-import result07 from "@/assets/results/result-07.png";
-import result08 from "@/assets/results/result-08.png";
-import result09 from "@/assets/results/result-09.png";
-import result10 from "@/assets/results/result-10.png";
+const RESULT_PLACEHOLDER = "/results/placeholder-result.svg";
 import moduleFundamentos from "@/assets/modules/fundamentos.png";
 import modulePosturasBase from "@/assets/modules/posturas-base.png";
 import modulePosturasAvancadas from "@/assets/modules/posturas-avancadas.png";
@@ -31,16 +22,16 @@ import {
 } from "@/components/ui/accordion";
 
 const RESULT_IMAGES = [
-  result12,
-  result01,
-  result02,
-  result03,
-  result05,
-  result06,
-  result07,
-  result08,
-  result09,
-  result10,
+  "/results/result-12.png",
+  "/results/result-01.png",
+  "/results/result-02.png",
+  "/results/result-03.png",
+  "/results/result-05.png",
+  "/results/result-06.png",
+  "/results/result-07.png",
+  "/results/result-08.png",
+  "/results/result-09.png",
+  "/results/result-10.png",
 ];
 
 const CTA_LINK = "https://pay.kiwify.com.br/5mIQ0ua";
@@ -238,25 +229,22 @@ const Hipopressivo = () => {
                 <span className="bg-primary/10 text-primary font-body text-sm font-semibold px-4 py-1.5 rounded-full inline-block mb-6">
                   PROTOCOLO HIPOPRESSIVO TEAM DALY
                 </span>
-                <h1 className="font-heading py-0 my-0 text-5xl opacity-95 md:text-7xl leading-tight text-foreground mb-6">
+                <h1 className="font-heading py-0 my-0 text-4xl sm:text-5xl md:text-6xl lg:text-7xl leading-tight text-foreground mb-6">
                   <TypewriterText
                     text="Reduza até 12cm de cintura, trate a diástase e acabe com a incontinência urinária"
-                    className="py-0 my-0 opacity-95 text-5xl"
+                    className=""
                     speed={25}
                     delay={300}
                   />
                 </h1>
-                <p className="font-body text-lg text-muted-foreground mb-8 max-w-xl">
+                <p className="font-body text-base md:text-lg text-muted-foreground mb-8 max-w-xl">
                   Apenas 5 minutos por dia. Sem abdominal tradicional. Sem dieta restritiva. Sem equipamento.
                 </p>
                 <a href="#investimento">
-                  <button className="bg-primary text-primary-foreground font-heading text-base md:text-2xl px-6 md:px-10 py-3 md:py-4 rounded-lg cta-pulse hover:shadow-[0_0_25px_hsl(347_78%_55%/0.7)] transition-shadow mx-0">
+                  <button className="bg-primary text-primary-foreground font-heading text-sm sm:text-base md:text-xl px-6 md:px-10 py-3 md:py-4 rounded-lg cta-pulse hover:shadow-[0_0_25px_hsl(347_78%_55%/0.7)] transition-shadow w-full sm:w-auto">
                     QUERO COMEÇAR MINHA TRANSFORMAÇÃO
                   </button>
                 </a>
-                <p className="text-muted-foreground text-sm mt-4 mx-[50px]">
-                  ​
-                </p>
               </div>
             </ScrollReveal>
 
@@ -457,6 +445,7 @@ const Hipopressivo = () => {
                       alt={`Resultado antes e depois ${i + 1}`}
                       className="w-full h-auto rounded-xl object-contain max-h-[500px] mx-auto"
                       loading="lazy"
+                      onError={(e) => { (e.target as HTMLImageElement).src = RESULT_PLACEHOLDER; }}
                     />
                   </CarouselItem>
                 ))}
@@ -667,13 +656,25 @@ const Hipopressivo = () => {
         </div>
       </section>
 
+      {/* STICKY MOBILE CTA */}
+      <div className="fixed bottom-0 left-0 right-0 z-50 md:hidden bg-background/95 backdrop-blur-md border-t border-border px-4 py-3 safe-area-inset-bottom">
+        <a href={CTA_LINK} target="_blank" rel="noopener noreferrer" className="block">
+          <button className="w-full bg-primary text-primary-foreground font-heading text-base py-3 rounded-lg cta-pulse">
+            QUERO COMEÇAR — R$ 129,90
+          </button>
+        </a>
+      </div>
+
+      {/* Espaço para o sticky bar no mobile */}
+      <div className="h-20 md:hidden" />
+
       {/* FOOTER */}
       <footer className="bg-surface-dark py-8 text-center">
         <p className="font-heading text-primary text-lg opacity-60 mb-4">
           Protocolo Hipopressivo Team Daly
         </p>
         <p className="font-body text-muted-foreground text-xs">
-          © 2025 Protocolo Hipopressivo Team Daly por Dalyane Barbosa. Todos os direitos reservados.
+          © 2026 Protocolo Hipopressivo Team Daly por Dalyane Barbosa. Todos os direitos reservados.
         </p>
       </footer>
     </div>

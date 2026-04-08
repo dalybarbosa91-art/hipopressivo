@@ -1,0 +1,10 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="600" height="500" viewBox="0 0 600 500">
+  <rect width="600" height="500" fill="#141414"/>
+  <rect x="1" y="1" width="598" height="498" rx="12" fill="none" stroke="#e0214480" stroke-width="2"/>
+  <text x="300" y="220" font-family="sans-serif" font-size="48" font-weight="bold" fill="#e02144" text-anchor="middle" opacity="0.4">ANTES</text>
+  <line x1="300" y1="60" x2="300" y2="440" stroke="#e02144" stroke-width="1" stroke-dasharray="6 4" opacity="0.3"/>
+  <text x="150" y="270" font-family="sans-serif" font-size="14" fill="#666" text-anchor="middle">Antes</text>
+  <text x="450" y="270" font-family="sans-serif" font-size="14" fill="#666" text-anchor="middle">Depois</text>
+  <text x="300" y="320" font-family="sans-serif" font-size="13" fill="#555" text-anchor="middle">Resultado em breve</text>
+  <text x="300" y="360" font-family="sans-serif" font-size="11" fill="#444" text-anchor="middle">Adicione as imagens em public/results/</text>
+</svg>
