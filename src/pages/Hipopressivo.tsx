@@ -427,13 +427,15 @@ const Hipopressivo = () => {
       <section id="resultados" className="py-20 bg-card">
         <div className="container mx-auto px-4 max-w-5xl">
           <ScrollReveal>
-            <span className="label-tag mb-6 inline-block">RESULTADOS REAIS</span>
-            <h2 className="font-heading text-3xl md:text-4xl font-bold text-foreground mb-2">
-              Mulheres que transformaram a silhueta com o método hipopressivo
-            </h2>
-            <p className="text-muted-foreground text-sm mb-12">
-              Resultados obtidos com a prática do método hipopressivo. Resultados individuais podem variar.
-            </p>
+            <div className="text-center mb-12">
+              <span className="label-tag mb-6 inline-block">RESULTADOS REAIS</span>
+              <h2 className="font-heading text-3xl md:text-4xl font-bold text-foreground mb-2">
+                Mulheres que transformaram a silhueta com o método hipopressivo
+              </h2>
+              <p className="text-muted-foreground text-sm">
+                Resultados obtidos com a prática do método hipopressivo. Resultados individuais podem variar.
+              </p>
+            </div>
           </ScrollReveal>
 
           <div className="relative px-4 md:px-14">
