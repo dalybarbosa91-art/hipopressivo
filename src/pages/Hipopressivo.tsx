@@ -76,7 +76,7 @@ const PAIN_ITEMS: { text: string; icon: LucideIcon }[] = [
 const ENEMY_CARDS: { title: string; text: string; icon: LucideIcon }[] = [
   {
     title: "O Abdominal Tradicional",
-    text: "Cada repetição aumenta a pressão dentro da cavidade abdominal. Essa pressão vai para frente. Com o tempo, seu corpo aprende a projetar a barriga. Quanto mais você faz, mais a barriga projeta.",
+    text: "Cada repetição aumenta a pressão dentro da cavidade abdominal. Com o tempo, seu corpo aprende a projetar a barriga. Quanto mais você faz, mais a barriga projeta.",
     icon: Zap,
   },
   {
